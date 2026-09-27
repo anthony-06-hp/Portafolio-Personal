@@ -1,15 +1,5 @@
-/* ========================================================= 
-   PORTAFOLIO PERSONAL · JAVASCRIPT 
-   ========================================================= */ 
- 
- 
-/* ========================================================= 
-   1. DATOS DE SKILLS 
-========================================================= */ 
- 
+
 const skills = [ 
- 
-    /* FRONTEND */ 
  
     { 
         name: "HTML5", 
@@ -38,9 +28,6 @@ const skills = [
             "Manipulación del DOM, eventos, validaciones, localStorage e interactividad." 
     }, 
  
- 
-    /* BACKEND */ 
- 
     { 
         name: "Python", 
         category: "backend", 
@@ -58,9 +45,6 @@ const skills = [
         description: 
             "Desarrollo web, autenticación, registro de usuarios y manejo básico de sesiones." 
     }, 
- 
- 
-    /* DATABASE */ 
  
     { 
         name: "MySQL", 
@@ -80,9 +64,6 @@ const skills = [
             "Modelado, consultas y gestión de bases de datos relacionales." 
     }, 
  
- 
-    /* CLOUD */ 
- 
     { 
         name: "AWS", 
         category: "cloud", 
@@ -91,9 +72,6 @@ const skills = [
         description: 
             "Experiencia académica con EC2, RDS y fundamentos de despliegue en la nube." 
     }, 
- 
- 
-    /* HERRAMIENTAS */ 
  
     { 
         name: "Git y GitHub", 
@@ -141,11 +119,7 @@ const skills = [
     } 
  
 ]; 
- 
- 
-/* ========================================================= 
-   2. DATOS DE PROYECTOS 
-========================================================= */ 
+
  
 const projects = [ 
  
@@ -228,8 +202,7 @@ const projects = [
         technologies: [
             "HTML5",
             "CSS3",
-            "JavaScript",
-            "LocalStorage"
+            "JavaScript"
         ],
 
         github: "https://github.com/anthony-06-hp/Taskflow-app.git",
@@ -238,11 +211,6 @@ const projects = [
     }
 
 ];
-
-
-/* =========================================================
-   3. ELEMENTOS DEL DOM
-========================================================= */
 
 const html = document.documentElement;
 const body = document.body;
@@ -285,10 +253,6 @@ const siteHeader = document.querySelector("#site-header");
 const currentYear = document.querySelector("#current-year");
 
 
-/* =========================================================
-   4. UTILIDADES
-========================================================= */
-
 function setActiveButton(buttons, currentButton) {
 
     buttons.forEach((button) => {
@@ -298,10 +262,6 @@ function setActiveButton(buttons, currentButton) {
     currentButton.classList.add("is-active");
 }
 
-
-/* =========================================================
-   5. NAVEGACIÓN RESPONSIVE
-========================================================= */
 
 function closeNavigation() {
 
@@ -363,9 +323,6 @@ document.addEventListener("click", (event) => {
 });
 
 
-/* =========================================================
-   6. TEMA CLARO / OSCURO
-========================================================= */
 
 function applyTheme(theme) {
 
@@ -451,10 +408,6 @@ themeToggle?.addEventListener(
 
 initializeTheme();
 
-
-/* =========================================================
-   7. RENDER DE SKILLS
-========================================================= */
 
 function renderSkills(filter = "all") {
 
@@ -560,10 +513,6 @@ skillFilters.forEach((button) => {
 renderSkills();
 
 
-/* =========================================================
-   8. RENDER DE PROYECTOS
-========================================================= */
-
 function renderProjects(filter = "all") {
 
     if (!projectsGrid) return;
@@ -601,15 +550,6 @@ function renderProjects(filter = "all") {
                                 <span class="project-category">
                                     ${project.categoryLabel}
                                 </span>
-
-
-                                <button
-                                    class="details-btn"
-                                    type="button"
-                                    data-project-id="${project.id}"
-                                >
-                                    Ver detalles
-                                </button>
 
                             </figcaption>
 
@@ -738,10 +678,6 @@ projectFilters.forEach((button) => {
 
 renderProjects();
 
-
-/* =========================================================
-   9. MODAL DE PROYECTOS
-========================================================= */
 
 function openProjectModal(projectId) {
 
@@ -874,10 +810,6 @@ document.addEventListener(
     }
 );
 
-
-/* =========================================================
-   10. VALIDACIÓN DEL FORMULARIO
-========================================================= */
 
 function getFieldError(fieldId) {
 
@@ -1141,8 +1073,6 @@ function validateContactForm() {
     ].forEach(clearFieldError);
 
 
-    /* NOMBRE */
-
     const nameError =
         validateName(name);
 
@@ -1163,9 +1093,6 @@ function validateContactForm() {
         );
 
     }
-
-
-    /* EMAIL */
 
     const emailError =
         validateEmail(email);
@@ -1188,9 +1115,6 @@ function validateContactForm() {
 
     }
 
-
-    /* ASUNTO */
-
     const subjectError =
         validateSubject(subject);
 
@@ -1211,9 +1135,6 @@ function validateContactForm() {
         );
 
     }
-
-
-    /* MENSAJE */
 
     const messageError =
         validateMessage(message);
@@ -1239,11 +1160,6 @@ function validateContactForm() {
 
     return isValid;
 }
-
-
-/* =========================================================
-   VALIDACIÓN EN TIEMPO REAL
-========================================================= */
 
 [nameInput, emailInput, subjectInput, messageInput]
     .filter(Boolean)
@@ -1278,11 +1194,6 @@ function validateContactForm() {
         );
 
     });
-
-
-/* =========================================================
-   ENVÍO DEL FORMULARIO
-========================================================= */
 
 contactForm?.addEventListener(
     "submit",
@@ -1322,15 +1233,6 @@ contactForm?.addEventListener(
             return;
         }
 
-
-        /*
-         * Validación correcta del formulario.
-         *
-         * El formulario todavía no envía correos reales porque
-         * necesita conectarse posteriormente a un backend o
-         * servicio de formularios.
-         */
-
         formStatus.textContent =
             "Formulario validado correctamente. Los datos están listos para ser enviados.";
 
@@ -1353,11 +1255,6 @@ contactForm?.addEventListener(
 
     }
 );
-
-
-/* =========================================================
-   11. HEADER AL HACER SCROLL
-========================================================= */
 
 function updateHeader() {
 
@@ -1383,10 +1280,6 @@ window.addEventListener(
 
 updateHeader();
 
-
-/* =========================================================
-   12. BOTÓN VOLVER ARRIBA
-========================================================= */
 
 function updateBackToTop() {
 
@@ -1420,11 +1313,6 @@ backToTop?.addEventListener(
 
     }
 );
-
-
-/* =========================================================
-   13. NAVEGACIÓN ACTIVA
-========================================================= */
 
 const sections =
     document.querySelectorAll(
@@ -1489,11 +1377,6 @@ sections.forEach(
         )
 );
 
-
-/* =========================================================
-   14. ANIMACIONES DE ENTRADA
-========================================================= */
-
 const revealElements =
     document.querySelectorAll(
         ".reveal"
@@ -1540,11 +1423,6 @@ revealElements.forEach(
             element
         )
 );
-
-
-/* =========================================================
-   15. AÑO DEL FOOTER
-========================================================= */
 
 if (currentYear) {
 
