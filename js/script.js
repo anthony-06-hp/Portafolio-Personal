@@ -208,7 +208,37 @@ const projects = [
         github: "https://github.com/anthony-06-hp/Taskflow-app.git",
 
         demo: "#"
-    }
+    },
+
+    {
+        id: 4,
+
+        title: "INTELLIGENTLY - Sistema Inteligente de Análisis Educativo",
+
+        category: "IA",
+
+        categoryLabel: "Inteligencia Artificial",
+
+        description:
+        "Plataforma educativa desarrollada con Django que utiliza inteligencia artificial y visión computacional para apoyar el control de asistencia, el análisis de sesiones educativas y la generación de reportes para docentes.",
+
+        problem:
+        "La gestión manual de la asistencia y el seguimiento de las sesiones educativas pueden dificultar la organización y el análisis de información académica. INTELLIGENTLY busca facilitar estos procesos mediante herramientas de visión computacional y aprendizaje automático.",
+
+        image: "assets/images/intelligently.jpg",
+
+        technologies: [
+        "Python",
+        "Django",
+        "OpenCV",
+        "Scikit-learn",
+        "SQLite"
+       ],
+
+       github: "https://github.com/anthony-06-hp/Intelligently-Educacional-IA.git",
+
+      demo: "#"
+    },
 
 ];
 
